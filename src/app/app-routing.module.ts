@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { CdkObserversModule } from './observers/cdk-observers.module';
+
+const routes: Routes = [
+  {
+    path: 'observers',
+    loadChildren: () => CdkObserversModule
+}, 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
